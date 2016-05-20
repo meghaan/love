@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Love Calculator</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    
+	
+		<!--Logic-->
+	
+	<script type="text/javascript">
+      function calculate()
+      {
+        var name1=document.getElementById("name1").value;
+        var name2=document.getElementById("name2").value;
+        
+        var name=name1.concat(name2);
+        var uni=[];
+    
+       for(i=0;i<name.length;i++)
+       {
+          if(uni.length==0)
+            uni.push(name.charAt(0));
+          else
+            {
+              var same=0;
+              for(j=0;j<uni.lenth;j++)
+               {
+                 if(uni[j]==name.charAt[i]);
+                 same=1;
+               }
+              
+              if(same==0)
+                uni.push(name.charAt[i]);
+              }
+       }
+
+    document.getElementById("result").innerHTML=name1+" loves "+name2+" "+uni.length*54%100+"%";
+     //alert(uni.length*54%100);      
+
+      }
+    </script>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Love Calculator</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Calculate now!</a>
+                    </li>
+               
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile.png" alt="">
+					<h1 id="result"></h1>
+                    <div class="intro-text">
+                        <span class="name">Love Calculator</span>
+                        <hr class="star-light">
+                        <span class="skills">Calculate the love between you and your partner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- form section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Calculate Now!!</h2>
+                    <hr class="star-primary">
+
+					<!--
+				
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name of first person</label>
+                                <input type="text" class="form-control" placeholder="Name of first person" id="name1" required data-validation-required-message="Please enter first person's name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name of second person</label>
+                                <input type="text" class="form-control" placeholder="Name of first person" id="name1" required data-validation-required-message="Please enter first person's name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                     
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg" onclick="calculate()">Calculate</button>
+                            </div>
+                        </div>
+             -->
+			 
+			 
+			   <div class="row control-group">
+			      <div class="form-group col-xs-12 floating-label-form-group controls">
+         			 <input type="text" id="name1" class="form-control" placeholder="Name of first person"   required><br>
+                     <input type="text" id="name2" class="form-control" placeholder="Name of second person" placeholder="name"  required>
+		          </div>
+			   </div>
+			   
+			   <div class="row">
+                  <div class="form-group col-xs-12">
+                    <button type="submit" onclick="calculate()" class="btn btn-success btn-lg">Try it</button>
+				  </div>
+               </div>
+                </div>
+            </div>
+  
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+	
+	
+
+
+</body>
+
+</html>
